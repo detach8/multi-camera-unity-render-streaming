@@ -1,6 +1,6 @@
 # Multi-independent Render Streaming in Unity
 
-This project demonstrates how to use Unity Render Streaming with multiple independent streams (i.e. each with its own camera and input) can be achieved by implementing a custom Signaling Handler.
+This project demonstrates how Unity Render Streaming with multiple independent streams (i.e. each with its own camera and input) can be achieved by implementing a custom Signaling Handler.
 
 ### Limitations of the provided Broadcast Signaling Handler
 
@@ -16,7 +16,7 @@ Although you can add multiple camera streams to the provided `Broadcast` Signali
 3. A custom Signaling Handler class (here `CameraSignalingHandler`) implements the `OnOffer(SignalingEventData)` method to receive an SDP offer from a WebRTC client.
 4. When `OnOffer(SignalingEventData)` is called, it finds an available Camera in the scene, i.e. one that is inactive.
 5. The `VideoStreamSender` Component is obtained from the Camera and attached to the stream.
-6. At the same time, the name of the Camera is set to the `connectionId` so it can be referenced later.
+6. At the same time, the name of the Camera is set to the `connectionId` so it can be referenced in the subsequent steps below.
 7. The `OnAddChannel(SignalingEventData)` is called when the client wishes to establish a data channel, such as for keyboard or mouse input.
 8. The Camera with the same `connectionId` name is retrieved from the scene, and its `InputReceiver` Component is obtained and attached to the data channel.
 9. When a connection drops or disconnects, the `active` state of the Camera is set to `false`.
