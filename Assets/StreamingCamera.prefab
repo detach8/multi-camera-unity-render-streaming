@@ -96,14 +96,14 @@ MonoBehaviour:
   m_Texture: {fileID: 0}
   m_WebCamDeviceIndex: 0
   m_Depth: 16
-  m_AntiAliasing: 1
+  m_AntiAliasing: 8
   m_Codec:
     m_MimeType: 
     m_SdpFmtpLine: 
-  m_FrameRate: 30
+  m_FrameRate: 20
   m_Bitrate:
     min: 0
-    max: 1000
+    max: 10000
   m_ScaleFactor: 1
   m_AutoRequestUserAuthorization: 1
 --- !u!114 &5212585767726336027

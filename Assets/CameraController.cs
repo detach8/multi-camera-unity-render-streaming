@@ -8,7 +8,10 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Randomly place the camera to create different views
+        var cameraPosition = Random.insideUnitCircle * 5f;
+        transform.position = new Vector3(cameraPosition.x, 15f, cameraPosition.y);
+        transform.LookAt(Vector3.zero);
     }
 
     // Update is called once per frame

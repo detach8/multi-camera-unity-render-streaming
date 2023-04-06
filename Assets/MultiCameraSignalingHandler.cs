@@ -113,11 +113,6 @@ public class MultiCameraSignalingHandler : SignalingHandlerBase, IOfferHandler, 
         gameObject.name = data.connectionId;
         gameObject.SetActive(true);
 
-        // Randomly place the camera to create different views
-        var camera = gameObject.GetComponent<Camera>();
-        camera.transform.position = Random.insideUnitSphere * 5.0f;
-        camera.transform.LookAt(Vector3.zero);
-
         AddSender(data.connectionId, gameObject.GetComponent<VideoStreamSender>());
         SendAnswer(data.connectionId);
     }
