@@ -1,4 +1,4 @@
-# Multi-independent Render Streaming in Unity
+# Multi-camera Unity Render Streaming
 
 This project demonstrates Unity Render Streaming with multiple independent streams, i.e. each with its own camera and input. This is mostly done by implementing a [custom Signaling Handler](Assets/MultiCameraSignalingHandler.cs).
 
